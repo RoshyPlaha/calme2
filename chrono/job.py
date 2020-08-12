@@ -1,6 +1,6 @@
 import os
 
-def create():
-    os.system('echo "/Users/roshy/Documents/projects/calme2/chrono/python_invoke.sh" | at -m 18:09 08/09/2020')
+def create_job(id):
+    os.system(f'echo "/Users/roshy/Documents/projects/calme2/chrono/python_invoke.sh {id}" | at -m 21:25 08/12/2020')
 
-create()
+create_job('39393939')
