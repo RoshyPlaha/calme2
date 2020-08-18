@@ -15,3 +15,4 @@ while True:
     print("####### Server is listening #######")
     data, address = s.recvfrom(1000)
     print("\n\n 2. Server received: ", data.decode('utf-8'), "\n\n")
+    
