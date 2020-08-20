@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-outbound/resources/config.ini
+resources/config.ini
 
 # C extensions
 *.so
