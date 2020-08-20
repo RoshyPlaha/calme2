@@ -16,6 +16,8 @@ class Loader(object):
 config_loader = Loader('dev')
 # config = config_loader.load_config()
 
+
+# ffs this needs to be a rest service
 def lambda_handler(event, _):
     
     errors = {}

@@ -11,10 +11,14 @@ python -m unittest
 ____
 Lot of folders here...
 Plan for backend is for:
-1) chrono to be called with id of request (from db?) and time to set request. This ceates AT job
+1) chrono to be called with id of request (from db?) and time to set request. This ceates AT job. This is a Flask APP
 2) AT job triggers and calls outbound code
-3) receiver server receives udp message and needs to call twilio
+3) receiver server receives udp message and needs to call twilio, serverless
 
+Setup flask app locally:
+export FLASK_APP=web.py in chrono folder
+to run chrono:
+flask run
 
 
 or using at:
