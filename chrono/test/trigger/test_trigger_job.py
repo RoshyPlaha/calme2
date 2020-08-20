@@ -1,9 +1,8 @@
 import unittest
-import os
 from unittest.mock import patch
 import json
-
-from trigger import entrance
+import os
+from trigger import trigger_job
 
 class TestTrigger(unittest.TestCase):
 
@@ -15,15 +14,11 @@ class TestTrigger(unittest.TestCase):
     def setUpClass(cls):
         pass
 
-    @patch('service.call.Caller.execute_call', return_value='Fine')
-    def test_trigger(self, mock_outbound_call):
-
-        print(f'resources are {self._resource_dir}')
-
+    def test_trigger(self):
         with open(f'{self._resource_dir}/dynamo_trigger.json') as json_file:
             _event = json.load(json_file)
-        entrance.lambda_handler(_event, '')
-        self.assertTrue(mock_outbound_call.called)
+        trigger_job.lambda_handler(_event, '')
+        self.assertTrue(True)
 
     @classmethod
     def tearDownClass(cls):
