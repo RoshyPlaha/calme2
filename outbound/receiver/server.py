@@ -1,5 +1,6 @@
 import socket
 import sys
+import json
 
 ip = '127.0.0.1'
 port = 3000
@@ -15,4 +16,7 @@ while True:
     print("####### Server is listening #######")
     data, address = s.recvfrom(1000)
     print("\n\n 2. Server received: ", data.decode('utf-8'), "\n\n")
+    message = json.loads(data.decode('utf-8'))
+    print(f'message id: {message.id} and the date received was: {message.date}')
+    
     
