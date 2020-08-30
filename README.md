@@ -33,3 +33,16 @@ execute a script at a given time: at 09:00 -f /home/linuxize/script.sh
 https://superuser.com/questions/43678/mac-os-x-at-command-not-working
 https://unix.stackexchange.com/questions/478823/making-at-work-on-macos/478840#478840 
 
+Server installation on linux:
+Conda:
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
+
+OR for no UI prompts
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
+eval "$(/home/ec2-user/miniconda/bin/conda shell.bash hook)"
+
