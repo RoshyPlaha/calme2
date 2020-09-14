@@ -13,7 +13,7 @@ hooks:
     #   timeout: 300
     #   runas: root
   ApplicationStart:
-    - location: Scrips/load_conda_env.sh
+    - location: Scripts/load_conda_env.sh
       timeout: 300
       runas: root
   ApplicationStop:
